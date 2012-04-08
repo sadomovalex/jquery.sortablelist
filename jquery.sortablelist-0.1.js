@@ -9,7 +9,7 @@ Copyright (c) 2012 Alexey Sadomov
         var opts = $.extend({}, $.fn.sortablelist.defaults, options);
 
         var width = self.width() || opts.width;
-        width += opts.arrowsColumnWidth;
+        width += opts.arrowsColumnWidth + 5;
 
         var height = self.height() || opts.height;
         

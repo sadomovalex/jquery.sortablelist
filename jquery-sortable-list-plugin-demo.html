@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>jQuery Sortable List plugin demo</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="jquery.sortablelist-0.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#myList").sortablelist();
+        });
+    </script>
+    <style type="text/css">
+        .list { width: 100px; height: 100px; }
+        .table {width: 500px; border: 1px solid Gray; }
+        .table td { vertical-align: top; }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <h2>jQuery Sortable List plugin demo</h2>
+        <p>This page shows example of using jQuery Sortable List plugin:</p>
+        <select id="myList" multiple="multiple" class="list">
+            <option value="1">one</option>
+            <option value="2">two</option>
+            <option value="3">three</option>
+            <option value="4">four</option>
+            <option value="5">five</option>
+        </select>
+        <br />
+        <br />
+        <h3>Markup:</h3>
+        <pre>
+&lt;style type=&quot;text/css&quot;&gt;
+    .list { width: 100px; height: 100px; }
+&lt;/style&gt;
+
+&lt;select id=&quot;myList&quot; multiple=&quot;multiple&quot; class=&quot;list&quot;&gt;
+    &lt;option value=&quot;1&quot;&gt;one&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;two&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;three&lt;/option&gt;
+    &lt;option value=&quot;4&quot;&gt;four&lt;/option&gt;
+    &lt;option value=&quot;5&quot;&gt;five&lt;/option&gt;
+&lt;/select&gt;
+        </pre>
+        <h3>Script:</h3>
+        <pre>
+$(function () {
+    $(&quot;#myList&quot;).sortablelist();
+});
+        </pre>
+        <h3>Additional options:</h3>
+        <table class="table">
+        <col style="width: 200px;" />
+        <col style="width: 300px;" />
+        <tr>
+            <td>Name</td>
+            <td>Description</td>
+        </tr>
+        <tr>
+            <td>arrowsColumnWidth</td>
+            <td>Width of the div which will be added next to the html select element. Default value is 20.</td>
+        </tr>
+        <tr>
+            <td>up</td>
+            <td>Text (or html content) for up arrow. Default value is "&uArr;" (<code>&amp;uArr;</code>).</td>
+        </tr>
+        <tr>
+            <td>down</td>
+            <td>Text (or html content) for down arrow. Default value is "&dArr;" (<code>&amp;dArr;</code>).</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>If width of html select element can't be determined, this parameter will be used for width of wrapping div. Default value is 200.</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>If height of html select element can't be determined, this parameter will be used for height of wrapping div. Default value is 100.</td>
+        </tr>
+        </table>
+        <br />
+        <h3>Example of usage with options:</h3>
+        <pre>
+$(function () {
+    $(&quot;#myList&quot;).sortablelist({ arrowsColumnWidth : 30 });
+});
+        </pre>
+        <p>For more details see <a href="http://sadomovalex.blogspot.com/2012/04/jquery-sortable-list-plugin.html">http://sadomovalex.blogspot.com/2012/04/jquery-sortable-list-plugin.html</a>.</p>
+    </div>
+    </form>
+</body>
+</html>
